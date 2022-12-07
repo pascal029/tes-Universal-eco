@@ -10,6 +10,11 @@ const userReducer = (state = initState, action) => {
         ...state,
         users: action.payload,
       };
+    case "user/fetchSuccess":
+      return {
+        ...state,
+        user: action.payload,
+      };
     case "users/sort":
       return {
         ...state,
