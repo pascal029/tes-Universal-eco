@@ -20,7 +20,6 @@ class User {
             },
           },
         ])
-        .project({ _id: 0, address_id: 0 })
         .toArray();
       return users;
     } catch (error) {
