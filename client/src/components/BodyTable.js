@@ -1,4 +1,13 @@
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 export default function BodyTable({ user }) {
+  const navigate = useNavigate();
+
+  const fetchUser = (id) => {
+    navigate(`/edit/${id}`);
+  };
+
   return (
     <tr>
       <td>
@@ -11,7 +20,7 @@ export default function BodyTable({ user }) {
         })}
       </td>
       <td>
-        <button>Edit</button>
+        <button onClick={() => fetchUser(user._id)}>Edit</button>
       </td>
     </tr>
   );
